@@ -20,7 +20,6 @@ This app is designed to work **fully with Android TV controllers**:
 
 > 💡 Ideal for Android TV, Fire TV Stick, emulator with controller, or physical gamepads.
 
-## 📸 Screenshots
 
 ## 📸 Screenshots
 
