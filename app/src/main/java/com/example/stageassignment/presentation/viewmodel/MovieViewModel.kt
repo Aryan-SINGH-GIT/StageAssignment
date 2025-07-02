@@ -3,9 +3,9 @@ package com.example.stageassignment.presentation.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.stageassignment.data.model.Movie
-import com.example.stageassignment.data.api.MockApiService
-import com.example.stageassignment.data.repository.MovieRepository
 import com.example.stageassignment.domain.usecase.GetMoviesUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -16,11 +16,10 @@ sealed class MovieUiState {
     data class Error(val message: String) : MovieUiState()
 }
 
-class MovieViewModel : ViewModel() {
-    private val apiService = MockApiService()
-    private val repository = MovieRepository(apiService)
-    private val getMoviesUseCase = GetMoviesUseCase(repository)
-
+@HiltViewModel
+class MovieViewModel @Inject constructor(
+    private val getMoviesUseCase: GetMoviesUseCase
+) : ViewModel() {
     private val _uiState = MutableStateFlow<MovieUiState>(MovieUiState.Loading)
     val uiState: StateFlow<MovieUiState> = _uiState
 

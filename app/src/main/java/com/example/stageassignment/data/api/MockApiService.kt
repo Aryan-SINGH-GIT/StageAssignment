@@ -1,9 +1,10 @@
 package com.example.stageassignment.data.api
 
+import javax.inject.Inject
 import com.example.stageassignment.data.model.Movie
 import kotlinx.coroutines.delay
 
-class MockApiService {
+class MockApiService @Inject constructor() {
     suspend fun getMovies(): List<Movie> {
         delay(1000) // Simulate network delay
         return listOf(
