@@ -27,6 +27,13 @@ This app is designed to work **fully with Android TV controllers**:
 |-------------|--------------|
 | <img src="https://github.com/user-attachments/assets/22c0c793-5243-4ab6-8ba7-6347a39b530c" width="400"/> | <img src="https://github.com/user-attachments/assets/d7501751-e7b2-41c2-9cad-c5f2a27bc5aa" width="400"/> |
 
+## Video Demo
+
+
+https://github.com/user-attachments/assets/b448b56a-0a62-4e20-804c-dd11cf20aad1
+
+
+
 ## 🏗️ Tech Stack
 
 - **Kotlin**
